@@ -1,0 +1,19 @@
+case,comparison,difference_rms_dbfs,correlation
+01_fractional_pitch,exact vs ideal,-31.178955307002013,0.9331942357832049
+01_fractional_pitch,exact vs reference,-17.144983636636756,-0.5640750388255823
+01_fractional_pitch,ideal vs reference,-16.6565110862959,-0.7503617876196926
+02_max_pitch_alias,exact vs ideal,-27.660503506143655,0.05341316974261701
+02_max_pitch_alias,exact vs reference,-30.672122446187498,0.23696023385740178
+02_max_pitch_alias,ideal vs reference,-30.669270689742444,0.22526883520020705
+03_dense_mix_headroom,exact vs ideal,-31.211599112052028,0.8165170122003874
+03_dense_mix_headroom,exact vs reference,-25.008173948487403,0.1443435547112924
+03_dense_mix_headroom,ideal vs reference,-22.740957152288544,-0.10633966464816
+04_low_level_gaussian,exact vs ideal,-55.02456057248557,0.03034438277310109
+04_low_level_gaussian,exact vs reference,-55.002153019661925,-0.0016287011830904518
+04_low_level_gaussian,ideal vs reference,-77.11886329433477,0.07282893861182885
+05_room_reverb,exact vs ideal,-68.38183686291495,0.8275078479519048
+05_room_reverb,exact vs reference,-63.524408669383874,-0.010996222404371526
+05_room_reverb,ideal vs reference,-63.53044300406535,-0.011094399202347834
+06_xa_resampling,exact vs ideal,-300.0,1.0
+06_xa_resampling,exact vs reference,-12.941112505255441,-0.04098901882568467
+06_xa_resampling,ideal vs reference,-12.941112505255441,-0.04098901882568467
