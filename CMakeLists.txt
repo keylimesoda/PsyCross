@@ -113,4 +113,16 @@ if(BUILD_TESTING)
     psycross_add_audio_test(psycross_reference_xa_test
         tests/audio/PsyX_ReferenceXA_test.cpp
         src/audio/PsyX_ReferenceXA.cpp src/audio/PsyX_ReferenceResampler.cpp)
+
+    add_executable(psycross_spu_non_pmon_e2e_test
+        tests/audio/PsyX_SPUNonPmonE2E_test.cpp)
+    target_include_directories(psycross_spu_non_pmon_e2e_test PRIVATE
+        "include" "include/psx" "src" "src/audio")
+    target_link_libraries(psycross_spu_non_pmon_e2e_test PRIVATE psycross_static)
+    add_test(
+        NAME psycross_spu_non_pmon_e2e_test
+        COMMAND psycross_spu_non_pmon_e2e_test)
+    set_tests_properties(
+        psycross_spu_non_pmon_e2e_test
+        PROPERTIES ENVIRONMENT "SDL_AUDIODRIVER=dummy")
 endif()
