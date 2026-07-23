@@ -9,6 +9,10 @@ static int s_inTransfer = 0;
 static int s_transferMode = SPU_TRANSFER_BY_DMA;
 static SpuTransferCallbackProc s_transferCallback = NULL;
 
+extern int PsyX_SPUAL_SetNoiseClock(int nClock);
+extern u_int PsyX_SPUAL_SetNoiseVoice(int onOff, u_int voiceBits);
+extern u_int PsyX_SPUAL_SetPitchLFOVoice(int onOff, u_int voiceBits);
+
 unsigned int SpuWrite(unsigned char* addr, unsigned int size)
 {
 	unsigned int result = PsyX_SPUAL_Write(addr, size);
@@ -321,6 +325,21 @@ void SpuSetVoiceRR(int vNum, unsigned short RR)
 extern void SpuSetVoiceSL(int vNum, unsigned short SL)
 {
 	VOICE_ATTRIB_SETTER_SHORTCUT(SPU_VOICE_ADSR_SL, sl, SL);
+}
+
+int SpuSetNoiseClock(int n_clock)
+{
+	return PsyX_SPUAL_SetNoiseClock(n_clock);
+}
+
+unsigned int SpuSetNoiseVoice(int on_off, unsigned int voice_bit)
+{
+	return PsyX_SPUAL_SetNoiseVoice(on_off, voice_bit);
+}
+
+unsigned int SpuSetPitchLFOVoice(int on_off, unsigned int voice_bit)
+{
+	return PsyX_SPUAL_SetPitchLFOVoice(on_off, voice_bit);
 }
 
 void SpuSetVoiceADSRAttr(int vNum,
